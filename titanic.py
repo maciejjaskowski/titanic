@@ -188,7 +188,7 @@ def validate_models(df):
 df = add_features(df)
 df_test = add_features(df_test)
 
-features = ['Survived', 'Gender', 'TitleMin', 'FamilySize', 'AgeFilledMedianByTitle']
+features = ['Survived', 'Gender', 'TitleMin', 'FamilySize', 'AgeFilledMedianByTitle'] #=> 0.78469 on Kaggle
 
 output, forest = train_forest(df[features].values[0::,1::], df[features].values[0::,0], df_test[features[1:]].values)
 
